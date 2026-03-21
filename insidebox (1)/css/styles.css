@@ -1,3 +1,182 @@
 body {
     background-color: #eee;
 }
+
+
+.inner-container {
+    margin: auto;
+    max-width: 1080px;
+}
+
+.main-menu {
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 2rem;
+    gap: 1.5rem;
+}
+
+
+
+h1 {
+
+    font-family: Nunito;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.0375rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: #727B81;
+}
+
+h1 span {
+  color: #0A91DE;
+}
+
+p {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+        color: #727B81;
+        font-family: Manrope;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+}
+.main-menu ul {
+    padding: 0;
+    list-style-type: none;
+    width: 10.875rem;
+    height: 12rem;
+    border-radius: 0.4375rem;
+    border: 1px solid #0A91DE;
+    background: #FFF;
+    box-shadow: 0 4px 4px 0 #DDD;
+}
+.main-menu li {
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+
+a {
+    color: #666F74;
+    font-family: Manrope;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #0A91DE;
+  
+}
+
+svg {
+    width: 1.6875rem;
+    height: 1.6875rem;
+    aspect-ratio: 1/1;
+}
+.main-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 40%;
+    top: -0.5rem;
+    width: 5.75rem;
+    color: #666F74;
+    font-family: Manrope;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    gap: 1rem;
+    visibility: 0;
+    opacity: 0;
+}
+
+.sub-menu li {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+
+}
+
+.sub-menu li:last-of-type {
+    border-bottom: none;
+
+}
+
+.sub-menu li:hover a,
+.main-menu li:hover svg path {
+    color: #0A91DE;
+    stroke: #0A91DE;
+    fill: #ffff;
+}
+
+.main-menu li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 920px) {
+    header {
+            width: 10.875rem;
+            height: 12rem;
+        }
+
+    .flex,
+    nav ul.main-menu {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        white-space: nowrap;
+        gap: 1rem;
+
+    }
+
+   
+    .main-menu li {
+        position: relative;
+        width: 8rem;
+        display: block;
+    }
+
+   
+    .sub-menu {
+        background-color: #fff;
+        left: -1rem;
+        max-height: 0;
+        visibility: 0;
+        opacity: 0;
+        position: absolute;
+        top: 1rem;
+        width: 100%;
+        border: none;
+
+    }
+
+    .main-menu:focus>li>.sub-menu,
+    .main-menu li:hover>.sub-menu {
+        max-height: unset;
+
+        visibility: visible;
+        opacity: 1;
+    }
+}
